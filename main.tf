@@ -1,5 +1,9 @@
 # Resource Block
-resource "aws_instance" "ec2demo" {
+resource "aws_instance" "web" {
   ami           = "ami-0d3a2960fcac852bc"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "HelloWorld"
+  }
 }
